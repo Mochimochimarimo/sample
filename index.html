@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>ocument</title>
 </head>
-<body>
-    <div class="slider">
-          <div class="slides">
-          <div id="slide-1">
-            <img src="photo/NCM10.jpg" alt="">
-          </div>
-          <div id="slide-2">
-            <img src="photo/NCM5.jpg" alt="">
-          </div>
-          <div id="slide-3">
-            <img src="photo/NCM6.jpg" alt="">
-          </div>
-          <div id="slide-4">
-            <img src="photo/NCM7.jpg" alt="">
-          </div>
-          <div id="slide-5">
-            <img src="photo/NCM9.jpg" alt="">
-          </div>
-        </div>
+   <body>
+      <div class="hidari"></div>
+      <div class="migi"></div>
+      <div class="aaa">
+         <div class="carousel__viewport">
+            <div id="carousel__slide1" class="carousel__slide"> 
+               <img  class="slide_photo" src="photo/NCM10.jpg">
+               <a href="#carousel__slide4" class="carousel__prev"></a>
+               <a href="#carousel__slide2" class="carousel__next"></a>
+            </div>
+            <div id="carousel__slide2" class="carousel__slide">
+               <img class="slide_photo" src="photo/NCM5.jpg">
+               <a href="#carousel__slide1" class="carousel__prev"></a>
+               <a href="#carousel__slide3" class="carousel__next"></a>
+            </div>
+            <div id="carousel__slide3" class="carousel__slide">
+               <img class="slide_photo" src="photo/NCM6.jpg">
+               <a href="#carousel__slide2" class="carousel__prev"></a>
+               <a href="#carousel__slide4" class="carousel__next"></a>
+            </div>
+            <div id="carousel__slide4" class="carousel__slide">
+               <img class="slide_photo" src="photo/NCM7.jpg">
+               <a href="#carousel__slide3" class="carousel__prev"></a>
+               <a href="#carousel__slide1" class="carousel__next"></a>
+            </div>
+         </div>
       </div>
-</body>
+   </body>
 </html>
