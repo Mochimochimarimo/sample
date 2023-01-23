@@ -32,8 +32,8 @@ body {
 .carousel__slide {
     scroll-snap-align: start;
     flex-shrink: 0;
-    width: 350px;
-    height: 350px;
+    /*width: 350px;
+    height: 350px;*/
     margin-right: 50px;
     border-radius: 20px;
     position: relative;
