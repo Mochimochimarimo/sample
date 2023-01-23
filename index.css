@@ -24,7 +24,7 @@ body {
 }
   
 .carousel__viewport {
-    display: flex;
+    display: visible;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
@@ -56,7 +56,7 @@ body {
     background-image: url(photo/hidari.svg);
     height: 66px;
     width: 66px;
-    margin-left: 80%;
+    margin-rigit: 20%;
     top: 10%;
 }
 
@@ -65,7 +65,7 @@ body {
     background-image: url(photo/migi.svg);
     height: 66px;
     width: 66px;
-    margin-left: 90%;
+    margin-rigit: 10%;
     top: 10%;
 }
 
