@@ -20,11 +20,11 @@ body {
     width: 85%;
     margin-left: 15%;
     text-align: center;
-    overflow: visible;
+    overflow: flex;
 }
   
 .carousel__viewport {
-    display: visible;
+    display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
@@ -32,8 +32,8 @@ body {
 .carousel__slide {
     scroll-snap-align: start;
     flex-shrink: 0;
-    /*width: 350px;
-    height: 350px;*/
+    width: 350px;
+    height: 350px;
     margin-right: 50px;
     border-radius: 20px;
     position: relative;
@@ -47,8 +47,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /*width: 100%;
-    height: 100%;*/
+    width: 100%;
+    height: 100%;
 }
   
 .hidari{
@@ -56,7 +56,7 @@ body {
     background-image: url(photo/hidari.svg);
     height: 66px;
     width: 66px;
-    margin-rigit: 20%;
+    margin-left: 60%;
     top: 10%;
 }
 
@@ -65,7 +65,7 @@ body {
     background-image: url(photo/migi.svg);
     height: 66px;
     width: 66px;
-    margin-rigit: 10%;
+    margin-left: 80%;
     top: 10%;
 }
 
