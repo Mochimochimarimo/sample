@@ -71,7 +71,6 @@ body {
 
 .carousel__prev{
     position: absolute;
-    z-index: 2;
     content: "";
     height: 20px;
     width: 20px;
@@ -81,7 +80,6 @@ body {
 
 .carousel__next{
     position: absolute;
-    z-index: 1;
     content: "";
     height: 20px;
     width: 20px;
