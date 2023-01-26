@@ -17,8 +17,8 @@ body {
 }
   
 .aaa{
-    /*width: 85%;
-    margin-left: 15%;*/
+    width: 85%;
+    margin-left: 15%;
     text-align: center;
     overflow: flex;
 }
