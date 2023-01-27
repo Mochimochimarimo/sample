@@ -51,7 +51,7 @@ body {
     height: 100%;
 }
   
-.hidari{
+.hidari + .carousel__prev{
     position: absolute;
     background-image: url(photo/hidari.svg);
     height: 66px;
@@ -60,7 +60,7 @@ body {
     top: 10%;
 }
 
-.migi{
+.migi + .carousel__next{
     position: absolute;
     background-image: url(photo/migi.svg);
     height: 66px;
@@ -69,7 +69,7 @@ body {
     top: 10%;
 }
 
-.carousel__prev{
+ /* .carousel__prev{
     position: absolute;
     content: "";
     height: 20px;
@@ -85,6 +85,12 @@ body {
     width: 20px;
     background-color: blue;
     right: -1rem;
+} */
+
+.hidari input{
+    display: none;
 }
 
-  
+.migi input{
+    display: none;
+}
