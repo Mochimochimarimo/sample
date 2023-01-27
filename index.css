@@ -51,7 +51,7 @@ body {
     height: 100%;
 }
   
-.hidari + .carousel__prev{
+.hidari{
     position: absolute;
     background-image: url(photo/hidari.svg);
     height: 66px;
@@ -60,7 +60,7 @@ body {
     top: 10%;
 }
 
-.migi + .carousel__next{
+.migi{
     position: absolute;
     background-image: url(photo/migi.svg);
     height: 66px;
