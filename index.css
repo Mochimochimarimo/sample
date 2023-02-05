@@ -1,17 +1,48 @@
-.scroll {
-    margin: auto;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 300px;
-  }
-  .box {
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-  }
-  .green {
-    background-color: #3cb371;
-  }
-  .orange {
-    background-color: #ffbf7f;
-  }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+/* .append-buttons {
+  text-align: center;
+  margin-top: 20px;
+} */
+
+/* .append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+} */
