@@ -76,3 +76,19 @@ body {
   height: auto;
   width: 100%;
 }
+
+/* 前への矢印 */
+.swiper-button-prev {
+  left: -30px;
+}
+/* 次への矢印 */
+.swiper-button-next {
+  right: -30px;
+}
+/* ページネーション */
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -25px;
+}
