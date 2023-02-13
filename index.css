@@ -86,7 +86,7 @@ body {
 /* 次への矢印 */
 .swiper-button-next {
   top: 0px;
-  right: 30em;
+  right: -30em;
 }
 /* ページネーション */
 .swiper-horizontal > .swiper-pagination-bullets,
