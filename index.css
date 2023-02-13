@@ -81,12 +81,12 @@ body {
 /* 前への矢印 */
 .swiper-button-prev {
   top: 0px;
-  left: 50em;
+  left: 60em;
 }
 /* 次への矢印 */
 .swiper-button-next {
   top: 0px;
-  right: 30em;
+  right: 10em;
 }
 /* ページネーション */
 .swiper-horizontal > .swiper-pagination-bullets,
