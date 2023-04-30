@@ -1,0 +1,481 @@
+/* ページ内にid指定でリンクする際にスクロールアニメーションを表示するため*/
+html{scroll-behavior: smooth;}
+
+/*スタイルリセット＋リンクホバーアニメーション追加*/
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-text-size-adjust: 100%;
+    z-index: 10;
+}
+
+a{
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a:hover,
+a:active{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+}
+/*スマホ用のスタイル*/
+@media only screen and (max-width: 600px) {
+    header{
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid #BFBFBF ;
+        background-color: white;
+        z-index: 90;
+    }
+
+    #header_icon{
+        width:120px;
+        top: 6px;
+        left: 13px;
+        position: fixed;
+        margin: 0;
+        z-index: 904;
+    }
+
+
+    /*　ハンバーガーボタン　*/
+    .hamburger {
+        display : block;
+        position: fixed;
+        z-index : 903;
+        right : 13px;
+        top   : 12px;
+        width : 42px;
+        height: 42px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .hamburger span {
+        display : block;
+        position: absolute;
+        width   : 30px;
+        height  : 2px ;
+        left    : 6px;
+        background : #555;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition   : 0.3s ease-in-out;
+        transition        : 0.3s ease-in-out;
+    }
+    .hamburger span:nth-child(1) {
+        top: 10px;
+    }
+    .hamburger span:nth-child(2) {
+        top: 20px;
+    }
+    .hamburger span:nth-child(3) {
+        top: 30px;
+    }
+    
+    /* ナビ開いてる時のボタン */
+    .hamburger.active span:nth-child(1) {
+        top : 16px;
+        left: 6px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform   : rotate(-45deg);
+        transform        : rotate(-45deg);
+    }
+    
+    .hamburger.active span:nth-child(2),
+    .hamburger.active span:nth-child(3) {
+        top: 16px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform   : rotate(45deg);
+        transform        : rotate(45deg);
+    }
+
+
+    nav.hamburger_list {
+        margin: 0;
+        padding:  0;
+        border: 0;
+        position: fixed;
+        z-index : -1;
+        opacity: 0;
+        top  : 60px;
+        left : 0%;
+        color: #000;
+        text-align: left;
+        transition: all 0.6s;
+        width: 100%;
+        height: 160px;
+        pointer-events: none;
+    }
+      
+    /* このクラスを、jQueryで付与・削除する */
+    nav.hamburger_list.active {
+        z-index : 902;
+        opacity: 100%;
+        pointer-events: auto;
+    }
+
+    .menu_open h3{
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition   : 0.3s ease-in-out;
+        transition        : 0.3s ease-in-out;
+        translate: 0px -200px;
+        z-index: 80;
+        pointer-events: none;
+        display: none;
+    }
+
+    .menu_open.active h3{
+        translate:0px 0px;
+        pointer-events: auto;
+        display: block;
+    }
+
+    .subMenu{
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        width: 20px;
+        top: 0px;
+    }
+
+    .subMenu span{
+        display : block;
+        position: absolute;
+        width   : 16px;
+        height  : 2px ;
+        right    : 3vw;
+        top: calc(100% / 2);
+        background : #464646;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition   : 0.3s ease-in-out;
+        transition        : 0.3s ease-in-out;
+    }
+
+    .subMenu span:nth-child(2){
+        -webkit-transform: rotate(90deg);
+        -moz-transform   : rotate(90deg);
+        transform        : rotate(90deg);
+    }
+
+    .subMenu.active span:nth-child(2){
+        opacity: 0;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform   : rotate(-90deg);
+        transform        : rotate(-90deg);
+    }
+
+    .header_menu{
+        position: relative;
+        width: 86vw;
+        margin:0 0 0 5vw;
+        padding:  25px 2vw;
+        border-top:0.5px solid #CCCCCC;
+        background-color: white;
+        z-index: 90;
+    }
+
+    nav.hamburger_list h1{
+        font-family: 'Zen Kaku Gothic Antique';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: -0.005em;
+        color: #464646;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav.hamburger_list h3{
+        font-family: 'Zen Kaku Gothic Antique';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: -0.005em;
+        color: #343434;
+        margin: 10px 7vw 30px;
+    }
+
+    nav.hamburger_list a{
+        text-decoration: none;
+        color: black;
+        margin:0px;
+        padding: 0px;
+        width: fit-content;
+        display: block;
+        border: none !important;
+    }
+
+    #header_articles p{
+        margin: 30px 0 4px 2px !important;
+    }
+
+    /*丸の拡大*/
+    .circle-bg{
+        position: fixed;
+        z-index:3;
+        /*丸の形*/
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #ffffff;
+        /*丸のスタート位置と形状*/
+        transform: scale(0);/*scaleをはじめは0に*/
+        right:-50px;
+        top:-50px;
+        transition: all .6s;/*0.6秒かけてアニメーション*/
+    }
+
+    .circle-bg.circleactive{
+        transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+    }
+
+    footer{
+        position: relative;
+        background-color: #F5F5F5;
+        height: 350px;
+    }
+
+    .footer_icon img{
+        margin-top: 35px;
+        width: 34vw;
+    }
+    
+    .footer_contents{
+        position: relative;
+        margin-left: 10%;
+        display: flex;
+        height: 350px;
+    }
+
+    #footer_items_1{
+        left: 0;
+    }
+
+    #footer_items_2{
+        left: 40vw;
+    }
+
+    .footer_items{
+        position: absolute;
+        top: 95px;
+    }
+
+    .footer_items img{
+        height: 3.5vw;
+    }
+
+    .school_addres{
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .school_addres img{
+        width: 75vw;
+    }
+
+    footer a{
+        display: block;
+        margin-top: 25px;
+    }
+}
+
+
+/*タブレット・パソコン用のスタイル*/
+@media only screen and (min-width: 600px) {
+    header{
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid #BFBFBF ;
+        background-color: white;
+        z-index: 90;
+    }
+
+    #header_icon{
+        width:120px;
+        top: 4px;
+        left: 20px;
+        position: fixed;
+        margin: 0;
+        z-index: 904;
+    }
+
+
+    /*　ハンバーガーボタン　*/
+    .hamburger {
+        display: none;
+    }
+
+    nav.hamburger_list {
+        margin: 0;
+        padding:  0;
+        border: 0;
+        position: fixed;
+        top  : 0;
+        left : 0%;
+        color: #000;
+        text-align: left;
+        transition: all 0.6s;
+        width: 100%;
+        z-index : 902;
+        opacity: 100%;
+        pointer-events: auto;
+
+    }
+      
+    /* このクラスを、jQueryで付与・削除する */
+    nav.hamburger_list.active {
+    }
+
+    .menu_open a{
+        display: none;
+    }
+
+    .menu_open h3{
+        display: none ;
+    }
+
+    .header_menu{
+        position: relative;
+        width: 130px;
+        margin:0;
+        padding: 0px ; 
+        z-index: 90;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .subMenu span{
+        display: none;
+    }
+
+    .subMenu{
+        display: none;
+    }
+
+    .header_menu{
+        position: fixed;
+        top: 20px;
+    }
+
+    #header_top{
+        right: 380px;
+    }
+
+    #header_contents{
+        right: 240px;
+    }
+
+    #header_articles{
+        right: 110px;
+    }
+
+    #header_about{
+        right: 0px;
+    }
+
+    nav.hamburger_list h1{
+        display: inline-block;
+        font-family: 'Zen Kaku Gothic Antique';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: 0.045em;
+        color: #464646;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    nav.hamburger_list h3{
+        font-family: 'Zen Kaku Gothic Antique';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: -0.005em;
+        color: #343434;
+        margin: 10px 7vw 30px;
+    }
+
+    nav.hamburger_list a{
+        text-decoration: none;
+        color: black;
+        margin:0px;
+        padding: 0px;
+        width: fit-content;
+        display: block;
+        border: none !important;
+    }
+
+    footer{
+        position: relative;
+        background-color: #F5F5F5;
+        margin-top: 80px;
+        height: 300px;
+    }
+
+    .footer_icon{
+        position: absolute;
+        top: 50px;
+    }
+
+    .footer_icon img{
+        width: 170px;
+        
+    }
+    
+    .footer_contents{
+        position: relative;
+        margin-left: 10%;
+        display: flex;
+        height: 300px;
+    }
+
+
+    #footer_items_1{
+        left: 400px;
+    }
+
+    #footer_items_2{
+        left: 650px;
+    }
+
+    .footer_items{
+        position: absolute;
+        top: 30px;
+    }
+
+    .footer_items img{
+        height: 15px;
+    }
+
+    .school_addres{
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .school_addres img{
+        width: 330px;
+    }
+
+    footer a{
+        display: block;
+        margin-top: 30px;
+    }
+   
+  
+}

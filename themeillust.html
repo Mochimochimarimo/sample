@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>テーマイラスト-彩西祭2023</title>
+        <meta name="description" content="メタディスクリプション" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/themeillust.css">
+        <!-- Favicon設定-->
+        <link rel="apple-touch-icon" href="">
+        <link type="image/x-icon" rel="icon" href="">
+        <!-- OG image settings-->
+        <meta property="og:description" content="メタディスクリプション">
+        <meta property="og:image" content="file/og_image.png">
+        <!--Google Fonts読み込み-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+Antique:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img id="header_icon" src="files/header_icon.png"></a>
+            <!--  ハンバーガーボタン  -->
+            <div class="hamburger"><span></span><span></span><span></span></div>
+            <nav class="hamburger_list">
+                <div id="header_top" class="header_menu"><a href="index.html" class="header_menu"><h1>トップページ</h1></a></div>
+                <div id="header_contents" class="header_menu toggle_menu"><a href="index.html#section_contents" class="header_menu"><h1>コンテンツ</h1></a><div class="subMenu"><span></span><span></span></div></div>
+                <a class="menu_open" href="pamphlet.html"><h3>デジタル版パンフレット</h3></a>
+                <a class="menu_open" href="themeillust.html"><h3>テーマイラスト紹介</h3></a>
+                <a class="menu_open" href="map.html"><h3>校内マップ</h3></a>
+                <a class="menu_open" href="tenji.html"><h3>展示内容紹介</h3></a>
+                <div id="header_articles" class="header_menu"><a href="articles.html"><h1>記事一覧</h1></a></div>
+                <div id="header_about" class="header_menu"><a href="about.html" class="header_menu"><h1>彩西祭について</h1></a></div>
+            </nav>
+            <div class="circle-bg"></div>
+        </header>
+        <div id="topImage">
+            <img id="topImage_desktop" src="files/themeillust_top.png" alt="">
+        </div>
+        <div class="section">
+            <div id="themeillust1" class="illust">
+                <img src="files/themeillust_example1.png" alt="">
+                <p>MOVIEの世界観にのめり込むような、没入感を表現するために“水に沈んていく人”のようなものを描きました。それだけ思い出に色濃く残る文化祭にしよう、という思いも込めています。また、今回の文化祭においてアイコニックなものになるように、はっきりとした色を用いました。遠くから見てもわかりやすいのではないか...と思います。現代的な雰囲気にするためにさし色を加え、部分的な色の変化といった各所のディテールにもこだわりました。一見単調ですが、じっくり見ても楽しめる作品です。</p>
+            </div>
+            <div id="themeillust2" class="illust">
+                <img src="files/themeillust_example2.png" alt="">
+                <p>MOVIEの世界観にのめり込むような、没入感を表現するために“水に沈んていく人”のようなものを描きました。それだけ思い出に色濃く残る文化祭にしよう、という思いも込めています。また、今回の文化祭においてアイコニックなものになるように、はっきりとした色を用いました。遠くから見てもわかりやすいのではないか...と思います。現代的な雰囲気にするためにさし色を加え、部分的な色の変化といった各所のディテールにもこだわりました。一見単調ですが、じっくり見ても楽しめる作品です。</p>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_contents">
+                <div class="footer_icon"><img src="files/header_icon.svg" alt=""></div>
+                <div class="footer_items" id="footer_items_1">
+                    <a href="#"><img src="files/footer_about.svg" alt=""></a>
+                    <a href="#"><img src="files/footer_map.svg" alt=""></a>
+                    <a href="#"><img src="files/footer_timetable.svg" alt=""></a>
+                </div>
+                <div class="footer_items" id="footer_items_2">
+                    <a href="#"><img src="files/footer_display.svg" alt=""></a>
+                    <a href="#"><img src="files/footer_HP.svg" alt=""></a>
+                </div>
+                <div class="school_addres"><img src="files/school_addres.svg" alt=""></div>
+            </div>
+        </footer>
+        <!--jQuery読み込み-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <!--Hamburger buttond JS-->
+        <script>
+            $(function() {
+                $('.hamburger').click(function() {
+                    $(this).toggleClass('active');
+                    
+                    if ($(this).hasClass('active')) {
+                        $('.hamburger_list').addClass('active');
+                        $(".circle-bg").addClass('circleactive');//丸背景にcircleactiveクラスを付与
+                    } else {
+                        $('.hamburger_list').removeClass('active');
+                        $(".circle-bg").removeClass('circleactive');//丸背景にcircleactiveクラスを付与
+                    }
+                });
+
+                $('.subMenu').click(function() {
+                    $(this).toggleClass('active');
+                    
+                    if ($(this).hasClass('active')) {
+                        $('.subMenu').addClass('active');
+                        $('.menu_open').addClass('active');
+                    } else {
+                        $('.subMenu').removeClass('active');
+                        $('.menu_open').removeClass('active');
+                    }
+                });
+
+            });
+        </script>
+    </body>
+</html>
