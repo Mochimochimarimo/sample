@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+/*dy{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
+>>>>>>> 2967d6c0c277a5279b5bb097aa4870f713b9ce07
 a{
     color: #333;
     margin: 0;
@@ -9,7 +20,7 @@ a:hover,
 a:active{
     text-decoration: none;
     cursor: pointer;
-}
+}*/
 
 @media only screen and (max-width: 600px) {
 
