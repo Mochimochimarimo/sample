@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/map.css">
         <!-- Favicon設定-->
-        <link rel="apple-touch-icon" href="">
-        <link type="image/x-icon" rel="icon" href="">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link type="image/x-icon" rel="icon" href="favicon.ico">
         <!-- OG image settings-->
         <meta property="og:description" content="メタディスクリプション">
         <meta property="og:image" content="file/og_image.png">
@@ -18,6 +18,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+Antique:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9BGKPTSGR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-V9BGKPTSGR');
+        </script>
     </head>
     <body>
         <header>
@@ -41,21 +50,21 @@
         </div>
         <div class="section">
             <div class="map_letter">
-                <a href="#"><img src="files/map.svg" alt=""></a>
+                <a href="files/map.png" download="files/map.png"><img src="files/map.svg" alt=""></a>
             </div> 
-            <div class="map_box"><img src="files/pamphlet_example.png" alt=""></div>
+            <div class="map_box"><img src="files/map.png" alt=""></div>
         </div>
         <footer>
             <div class="footer_contents">
                 <div class="footer_icon"><img src="files/header_icon.svg" alt=""></div>
                 <div class="footer_items" id="footer_items_1">
-                    <a href="#"><img src="files/footer_about.svg" alt=""></a>
-                    <a href="#"><img src="files/footer_map.svg" alt=""></a>
-                    <a href="#"><img src="files/footer_timetable.svg" alt=""></a>
+                    <a href="about.html"><img src="files/footer_about.svg" alt=""></a>
+                    <a href="map.html"><img src="files/footer_map.svg" alt=""></a>
+                    <a href="timetable.html"><img src="files/footer_timetable.svg" alt=""></a>
                 </div>
                 <div class="footer_items" id="footer_items_2">
-                    <a href="#"><img src="files/footer_display.svg" alt=""></a>
-                    <a href="#"><img src="files/footer_HP.svg" alt=""></a>
+                    <a href="disply.html"><img src="files/footer_display.svg" alt=""></a>
+                    <a href="http://www.edu.pref.shizuoka.jp/hamamatsunishi-h/home.nsf/IndexFormView?OpenView"><img src="files/footer_HP.svg" alt=""></a>
                 </div>
                 <div class="school_addres"><img src="files/school_addres.svg" alt=""></div>
             </div>
