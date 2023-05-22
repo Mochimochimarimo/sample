@@ -49,7 +49,7 @@ a:active{
         text-align: center;
     }
 
-    .grade{
+    #grade{
         width: 20%;
         text-align: center;
         margin: 0;
@@ -57,7 +57,7 @@ a:active{
         display: inline-block;
     }
 
-    .grade h2{
+    #grade h2{
         text-align: center;
         font-size: 14px;
         padding: 3px 0; 
@@ -67,7 +67,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .grade p{
+    #grade p{
         width: 9vw;
         height: 9vw;
         margin: 5px auto 5px;
@@ -112,7 +112,7 @@ a:active{
         display: block;
     }
 
-    .hr_tenji{
+    #hr_tenji{
         width:80%;
         display: inline-block;
         margin: 6px 10px;
@@ -122,7 +122,7 @@ a:active{
         border-radius: 10px;
     }
 
-    .hr_tenji h2{
+    #hr_tenji h2{
         font-size:12px;
         line-height: 15px;
         padding:  12px 0 2px; 
@@ -132,7 +132,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .hr_tenji h1{
+    #hr_tenji h1{
         font-size:17px;
         line-height: 26px;
         padding: 2px 0; 
@@ -142,7 +142,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .hr_tenji p{
+    #hr_tenji p{
         font-size:13px;
         line-height: 170%;
         padding: 2px 0 0; 
@@ -191,7 +191,7 @@ a:active{
         text-align: center;
     }
 
-    .grade{
+    #grade{
         width: 100px;
         text-align: center;
         margin: 0;
@@ -199,7 +199,7 @@ a:active{
         display: inline-block;
     }
 
-    .grade h2{
+    #grade h2{
         text-align: center;
         font-size: 17px;
         padding: 0px 0 10px 6px ; 
@@ -210,7 +210,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .grade p{
+    #grade p{
         width: 50px;
         height: 50px;
         margin: 5px auto 8px;
@@ -220,7 +220,7 @@ a:active{
         opacity: 1;
     }
 
-    .grade p:hover{
+    #grade p:hover{
         opacity: 0.2;
     }
 
@@ -254,14 +254,14 @@ a:active{
         display: block;
     }
 
-    .hr_flex{
+    #hr_flex{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
     }
 
-    .hr_tenji{
+    #hr_tenji{
         width: 35%;
         display: inline-block;
         margin: 13px;
@@ -271,7 +271,7 @@ a:active{
         border-radius: 10px;
     }
 
-    .hr_tenji h2{
+    #hr_tenji h2{
         font-size:12px;
         line-height: 15px;
         padding:  12px 0 2px; 
@@ -281,7 +281,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .hr_tenji h1{
+    #hr_tenji h1{
         font-size:17px;
         line-height: 26px;
         padding: 2px 0; 
@@ -291,7 +291,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .hr_tenji p{
+    #hr_tenji p{
         font-size:13px;
         line-height: 170%;
         padding: 2px 0 0; 
@@ -339,7 +339,7 @@ a:active{
         text-align: center;
     }
 
-    .grade{
+    #grade{
         width: 150px;
         text-align: center;
         margin: 0;
@@ -347,7 +347,7 @@ a:active{
         display: inline-block;
     }
 
-    .grade h2{
+    #grade h2{
         text-align: center;
         font-size: 20px;
         padding: 10px 0 10px 6px 0; 
@@ -358,7 +358,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .grade p{
+    #grade p{
         width: 70px;
         height: 70px;
         margin: 5px auto 15px;
@@ -368,7 +368,7 @@ a:active{
         opacity: 1;
     }
 
-    .grade p:hover{
+    #grade p:hover{
         opacity: 0.8;
     }
 
@@ -402,14 +402,14 @@ a:active{
 
 
 
-    .hr_flex{
+    #hr_flex{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
     }
 
-    .hr_tenji{
+    #hr_tenji{
         width: 300px;
         height: 150px;
         margin: 13px;
@@ -419,7 +419,7 @@ a:active{
         border-radius: 10px;
     }
 
-    .hr_tenji h2{
+    #hr_tenji h2{
         font-size:12px;
         line-height: 15px;
         padding:  6px 0 2px; 
@@ -429,7 +429,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .hr_tenji h1{
+    #hr_tenji h1{
         font-size:17px;
         line-height: 26px;
         padding: 2px 0; 
@@ -439,7 +439,7 @@ a:active{
         letter-spacing: 1.2px;
     }
 
-    .hr_tenji p{
+    #hr_tenji p{
         font-size:13px;
         line-height: 170%;
         padding: 2px 0 0; 
